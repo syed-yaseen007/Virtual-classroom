@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Virtual Classroom and Online Tutoring Site - Learn online with interactive courses and live tutoring sessions.">
+  <title>Virtual Classroom &amp; Online Tutoring</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. Navigation Bar
+       ======================================================================== -->
+  <header class="header">
+    <div class="container navbar">
+      <a href="#home" class="brand" aria-label="Virtual Classroom Home">
+        <div class="brand-icon">
+          <!-- Graduation Cap Icon -->
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+            <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/>
+          </svg>
+        </div>
+        <span>Virtual Classroom</span>
+      </a>
+
+      <!-- Desktop & Mobile Navigation Links -->
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#benefits" class="nav-link">Why Choose Us</a></li>
+          <li><a href="#courses" class="nav-link">Courses</a></li>
+          <li><a href="#schedule" class="nav-link">Schedule</a></li>
+          <li><a href="#materials" class="nav-link">Study Materials</a></li>
+          <li><a href="#dashboard" class="nav-link">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <span class="user-greeting" id="user-greeting" style="margin-right: 1rem; color: var(--text-body); font-weight: 500;"></span>
+        <button class="btn btn-outline btn-sm" id="logout-btn" style="margin-right: 1rem;">Logout</button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <!-- Hamburger Menu Icon -->
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================================
+         2. Hero Section
+         ====================================================================== -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span>&#9733;</span> Interactive Learning Platform
+          </div>
+          <h1 class="hero-title">
+            Learn Better. <br><span class="highlight">Grow Faster.</span>
+          </h1>
+          <p class="hero-desc">
+            A comprehensive virtual classroom platform connecting students with structured course curriculums, upcoming tutoring schedules, study materials, and a personalized learning dashboard.
+          </p>
+          <div class="hero-cta">
+            <a href="#courses" class="btn btn-primary btn-lg">Explore Courses &rarr;</a>
+            <a href="#schedule" class="btn btn-secondary btn-lg">&#128197; View Classes</a>
+            <a href="#dashboard" class="btn btn-outline btn-lg">&#9881; Dashboard</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <h4>6+</h4>
+              <p>Core Courses</p>
+            </div>
+            <div class="stat-item">
+              <h4>100%</h4>
+              <p>Free Study Notes</p>
+            </div>
+            <div class="stat-item">
+              <h4>Instant</h4>
+              <p>Local Persistence</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Mockup -->
+        <div class="hero-visual">
+          <div class="preview-card">
+            <div class="preview-card-header">
+              <span style="font-weight:700; font-size:0.95rem;">Live Classroom</span>
+              <span class="live-indicator"><span class="live-dot"></span> Active Now</span>
+            </div>
+            <div class="preview-card-body">
+              <div class="preview-schedule-item">
+                <div class="preview-icon">&#128187;</div>
+                <div class="preview-info">
+                  <h5>Web Development Fundamentals</h5>
+                  <p>Prof. Sarah Jenkins &bull; Tomorrow at 10:00 AM</p>
+                </div>
+              </div>
+              <div class="preview-schedule-item">
+                <div class="preview-icon">&#128013;</div>
+                <div class="preview-info">
+                  <h5>Python Recursion &amp; Algorithms</h5>
+                  <p>Dr. Robert Chen &bull; Mon at 04:00 PM</p>
+                </div>
+              </div>
+              <div class="preview-footer-note">
+                &#128161; <strong>Tip:</strong> Visit the Dashboard section to create your own courses and schedule custom classes!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. Benefits Section (Why Choose Us)
+         ====================================================================== -->
+    <section class="section section-alt" id="benefits">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Platform Highlights</span>
+          <h2 class="section-title">Designed for Modern Learning</h2>
+          <p class="section-subtitle">
+            Explore key educational features crafted to provide an intuitive and responsive online classroom environment.
+          </p>
+        </div>
+
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <!-- Book / Curriculum Icon -->
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+            </div>
+            <h3>Structured Curriculum</h3>
+            <p>Step-by-step modular lessons covering web technologies, programming languages, and databases with comprehensive syllabus outlines.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <!-- Calendar / Schedule Icon -->
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </div>
+            <h3>Interactive Schedule</h3>
+            <p>Clear visibility into upcoming webinars, office hours, and tutoring sessions with live video classroom experiences.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <!-- File / Notes Icon -->
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+            <h3>Study Materials &amp; Notes</h3>
+            <p>Access comprehensive study guides, syntax cheat sheets, and downloadable notes formatted for quick exam revision.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <!-- Sliders / Dashboard Icon -->
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="4" y1="21" x2="4" y2="14"></line>
+                <line x1="4" y1="10" x2="4" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12" y2="3"></line>
+                <line x1="20" y1="21" x2="20" y2="16"></line>
+                <line x1="20" y1="12" x2="20" y2="3"></line>
+                <line x1="1" y1="14" x2="7" y2="14"></line>
+                <line x1="9" y1="8" x2="15" y2="8"></line>
+                <line x1="17" y1="16" x2="23" y2="16"></line>
+              </svg>
+            </div>
+            <h3>Student Dashboard</h3>
+            <p>Interactive dashboard enabling students and tutors to add courses, schedule sessions, and manage their learning journey.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. Courses Section
+         ====================================================================== -->
+    <section class="section" id="courses">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Academic Offerings</span>
+          <h2 class="section-title">Explore Available Courses</h2>
+          <p class="section-subtitle">
+            Browse foundational and advanced computing subjects. Click "View Details" for the complete syllabus breakdown.
+          </p>
+        </div>
+
+        <!-- Filter & Search Toolbar -->
+        <div class="filter-bar">
+          <div class="filter-categories">
+            <button class="filter-btn active" data-category="All">All Courses</button>
+            <button class="filter-btn" data-category="Web Development">Web Dev</button>
+            <button class="filter-btn" data-category="Programming">Programming</button>
+            <button class="filter-btn" data-category="Databases">Databases</button>
+            <button class="filter-btn" data-category="Computer Science">Computer Science</button>
+            <button class="filter-btn" data-category="Networking">Networking</button>
+          </div>
+          <div class="search-box">
+            <span class="search-icon">&#128269;</span>
+            <input type="text" class="search-input" id="course-search-input" placeholder="Search by title or tutor..." aria-label="Search courses">
+          </div>
+        </div>
+
+        <!-- Dynamic Course Cards Grid -->
+        <div class="course-grid" id="courses-grid">
+          <!-- Populated by script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. Classroom and Class Schedule Section
+         ====================================================================== -->
+    <section class="section section-alt" id="schedule">
+      <div class="container schedule-container">
+        <div class="section-header">
+          <span class="section-tag">Live Tutoring Schedule</span>
+          <h2 class="section-title">Upcoming Classroom Sessions</h2>
+          <p class="section-subtitle">
+            Join virtual classrooms to participate in interactive lectures and tutor office hours.
+          </p>
+        </div>
+
+        <!-- Dynamic Schedule List Container -->
+        <div class="schedule-list" id="schedule-list">
+          <!-- Populated by script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. Study Materials Section
+         ====================================================================== -->
+    <section class="section" id="materials">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Learning Resources</span>
+          <h2 class="section-title">Study Materials &amp; Notes</h2>
+          <p class="section-subtitle">
+            Download or view reference notes, syntax cheat sheets, and practical code snippets.
+          </p>
+        </div>
+
+        <!-- Dynamic Materials Grid -->
+        <div class="materials-grid" id="materials-grid">
+          <!-- Populated by script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         7. Simple Dashboard Section
+         ====================================================================== -->
+    <section class="section section-alt" id="dashboard">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Interactive Management</span>
+          <h2 class="section-title">Student &amp; Tutor Dashboard</h2>
+          <p class="section-subtitle">
+            Add custom courses, schedule tutoring sessions, and manage your learning activities.
+          </p>
+        </div>
+
+        <!-- Metric Summary Cards -->
+        <div class="dashboard-metrics">
+          <div class="metric-card">
+            <div class="metric-icon blue">&#128218;</div>
+            <div>
+              <div class="metric-value" id="metric-total-courses">6</div>
+              <div class="metric-label">Total Courses</div>
+            </div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-icon teal">&#128197;</div>
+            <div>
+              <div class="metric-value" id="metric-total-classes">4</div>
+              <div class="metric-label">Scheduled Classes</div>
+            </div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-icon green">&#128196;</div>
+            <div>
+              <div class="metric-value" id="metric-total-materials">4</div>
+              <div class="metric-label">Study Materials</div>
+            </div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-icon amber">&#9733;</div>
+            <div>
+              <div class="metric-value" id="metric-total-custom">0</div>
+              <div class="metric-label">Custom Items Created</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Forms Grid: Add Course & Add Class -->
+        <div class="dashboard-grid">
+          <!-- Form 1: Add Course -->
+          <div class="form-panel">
+            <div class="panel-header">
+              <h3 class="panel-title">&#10133; Add New Course</h3>
+              <span class="badge badge-blue">Course Form</span>
+            </div>
+            <form id="add-course-form" class="app-form" novalidate>
+              <div class="form-group">
+                <label for="course-title-input" class="form-label">Course Title *</label>
+                <input type="text" id="course-title-input" class="form-control" placeholder="e.g., Mobile App Development" required>
+                <span class="form-error-msg">Course title is required.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="course-tutor-input" class="form-label">Instructor / Tutor Name *</label>
+                <input type="text" id="course-tutor-input" class="form-control" placeholder="e.g., Prof. John Miller" required>
+                <span class="form-error-msg">Tutor name is required.</span>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="course-category-select" class="form-label">Category *</label>
+                  <select id="course-category-select" class="form-control" required>
+                    <option value="">-- Select Category --</option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="Programming">Programming</option>
+                    <option value="Databases">Databases</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Networking">Networking</option>
+                    <option value="General">General</option>
+                  </select>
+                  <span class="form-error-msg">Please select a category.</span>
+                </div>
+                <div class="form-group">
+                  <label for="course-level-select" class="form-label">Level *</label>
+                  <select id="course-level-select" class="form-control" required>
+                    <option value="">-- Select Level --</option>
+                    <option value="Beginner">Beginner</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Advanced">Advanced</option>
+                  </select>
+                  <span class="form-error-msg">Please select a level.</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="course-desc-input" class="form-label">Short Description *</label>
+                <textarea id="course-desc-input" class="form-control" rows="3" placeholder="Explain the key learning objectives of this course..." required></textarea>
+                <span class="form-error-msg">Description must be at least 10 characters.</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width:100%; margin-top:0.5rem;">
+                &#10004; Save Course to Catalog
+              </button>
+            </form>
+          </div>
+
+          <!-- Form 2: Schedule a Class -->
+          <div class="form-panel">
+            <div class="panel-header">
+              <h3 class="panel-title">&#128197; Schedule a Live Session</h3>
+              <span class="badge badge-teal">Class Form</span>
+            </div>
+            <form id="add-class-form" class="app-form" novalidate>
+              <div class="form-group">
+                <label for="class-topic-input" class="form-label">Class Topic / Lecture Title *</label>
+                <input type="text" id="class-topic-input" class="form-control" placeholder="e.g., Responsive Grid Systems & Media Queries" required>
+                <span class="form-error-msg">Class topic is required.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="class-course-select" class="form-label">Associated Course *</label>
+                <select id="class-course-select" class="form-control" required>
+                  <option value="">-- Select Related Course --</option>
+                </select>
+                <span class="form-error-msg">Please choose an associated course.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="class-tutor-input" class="form-label">Instructor / Host *</label>
+                <input type="text" id="class-tutor-input" class="form-control" placeholder="e.g., Prof. Sarah Jenkins" required>
+                <span class="form-error-msg">Instructor name is required.</span>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="class-date-input" class="form-label">Session Date *</label>
+                  <input type="date" id="class-date-input" class="form-control" required>
+                  <span class="form-error-msg">Please select a valid date.</span>
+                </div>
+                <div class="form-group">
+                  <label for="class-time-input" class="form-label">Session Time *</label>
+                  <input type="text" id="class-time-input" class="form-control" placeholder="e.g., 03:00 PM - 04:30 PM" required>
+                  <span class="form-error-msg">Time is required.</span>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width:100%; margin-top:0.5rem;">
+                &#128197; Schedule Class Session
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- User Items Management Area -->
+        <div class="user-items-panel">
+          <div class="user-items-header">
+            <div>
+              <h3 style="font-size:1.15rem; font-weight:700; color:var(--primary-900);">&#128190; User-Created Entries</h3>
+              <p style="font-size:0.85rem; color:var(--text-muted);">Manage courses and sessions you have added during this session.</p>
+            </div>
+            <div style="display:flex; align-items:center; gap:0.75rem;">
+              <div class="user-tabs">
+                <button class="tab-btn user-tab-btn active" data-tab="courses">My Added Courses</button>
+                <button class="tab-btn user-tab-btn" data-tab="classes">My Scheduled Classes</button>
+              </div>
+              <button class="btn btn-outline btn-sm" id="reset-demo-data-btn" title="Clear all user-added items and restore default demo state">&#128260; Reset Demo</button>
+            </div>
+          </div>
+
+          <div class="user-items-list" id="user-items-list">
+            <!-- Populated dynamically by script.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       8. Modals & Overlays
+       ======================================================================== -->
+
+  <!-- Modal 1: Course Details Modal -->
+  <div class="modal-overlay" id="course-modal-overlay" aria-hidden="true" role="dialog" aria-labelledby="modal-course-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-course-title">Course Details</h3>
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div style="display:flex; gap:0.5rem; margin-bottom:1rem;">
+          <span class="badge badge-blue" id="modal-course-category">Category</span>
+          <span class="badge badge-green" id="modal-course-level">Level</span>
+        </div>
+        <p style="margin-bottom:1rem;">
+          <strong>Instructor:</strong> <span id="modal-course-tutor">Tutor Name</span> &bull;
+          <strong>Duration:</strong> <span id="modal-course-duration">8 Weeks</span> &bull;
+          <strong>Rating:</strong> <span id="modal-course-rating">4.9/5.0</span>
+        </p>
+        <p id="modal-course-desc" style="margin-bottom:1.5rem; color:var(--text-body);"></p>
+
+        <h4 style="font-size:1rem; font-weight:700; color:var(--primary-900); margin-bottom:0.75rem;">Curriculum Outline</h4>
+        <ul id="modal-course-syllabus" style="padding-left:1.25rem; font-size:0.92rem; color:var(--text-body);">
+          <!-- Populated by script.js -->
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary modal-close-btn">Close</button>
+        <a href="#schedule" class="btn btn-primary modal-close-btn">View Related Classes &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Classroom Simulator (Join Class Demo) -->
+  <div class="modal-overlay" id="class-sim-modal-overlay" aria-hidden="true" role="dialog" aria-labelledby="sim-class-topic">
+    <div class="modal-card" style="max-width:720px;">
+      <div class="modal-header">
+        <div>
+          <h3 id="sim-class-topic" style="font-size:1.15rem;">Live Classroom</h3>
+          <span style="font-size:0.8rem; color:var(--text-muted);">
+            <span id="sim-class-course">Course</span> &bull; Hosted by <strong id="sim-class-tutor">Tutor</strong>
+          </span>
+        </div>
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <!-- Video Conference Simulation Area -->
+        <div class="sim-video-area">
+          <div class="sim-avatar-box">&#128104;&#8205;&#127979;</div>
+          <h4 style="font-size:1.1rem; margin-bottom:0.25rem;">Live Lecture Session in Progress</h4>
+          <p style="font-size:0.85rem; color:#bfdbfe;">Connected with 18 other students</p>
+
+          <div class="sim-controls">
+            <button class="sim-btn-circle" id="sim-mic-btn" title="Toggle Microphone">&#127908;</button>
+            <button class="sim-btn-circle" id="sim-cam-btn" title="Toggle Camera">&#127909;</button>
+            <button class="sim-btn-circle active-red modal-close-btn" title="Leave Session">&#128222;</button>
+          </div>
+        </div>
+
+        <!-- Simulated Interactive Chat Box -->
+        <div style="background:var(--bg-page); border:1px solid var(--border-light); border-radius:var(--radius-md); padding:1rem; margin-bottom:1rem;">
+          <h5 style="font-size:0.88rem; font-weight:700; color:var(--primary-900); margin-bottom:0.5rem;">Classroom Chat &amp; Q&amp;A</h5>
+          <div id="sim-chat-messages" style="max-height:100px; overflow-y:auto; margin-bottom:0.75rem; padding:0.5rem; background:#ffffff; border:1px solid var(--border-light); border-radius:var(--radius-sm);">
+            <div style="font-size:0.85rem; margin-bottom:0.35rem;"><strong style="color:var(--primary-700);">Tutor:</strong> Welcome everyone! Feel free to ask questions about today's lecture.</div>
+          </div>
+          <form id="sim-chat-form" style="display:flex; gap:0.5rem;">
+            <input type="text" id="sim-chat-input" class="form-control" style="font-size:0.85rem; padding:0.4rem 0.75rem;" placeholder="Type a question for the instructor..." required>
+            <button type="submit" class="btn btn-primary btn-sm">Send</button>
+          </form>
+        </div>
+
+        <div class="sim-disclaimer">
+          &#9888; <strong>Note:</strong> This is a simulated classroom environment for demonstration purposes.
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary modal-close-btn">Leave Classroom</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: Study Material Viewer Modal -->
+  <div class="modal-overlay" id="material-modal-overlay" aria-hidden="true" role="dialog" aria-labelledby="modal-mat-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <h3 id="modal-mat-title">Study Material</h3>
+          <span style="font-size:0.8rem; color:var(--text-muted);" id="modal-mat-course">Course Title</span>
+        </div>
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <pre style="background:var(--code-bg, #0f172a); color:#f8fafc; padding:1.25rem; border-radius:var(--radius-md); font-family:monospace; font-size:0.88rem; white-space:pre-wrap; max-height:350px; overflow-y:auto;" id="modal-mat-body"></pre>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary modal-close-btn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- ========================================================================
+       9. Footer
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="brand" style="margin-bottom:0.75rem;">
+            <div class="brand-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/>
+              </svg>
+            </div>
+            <span>Virtual Classroom</span>
+          </a>
+          <p class="footer-desc">
+            A clean, responsive educational platform designed for course exploration, class scheduling, study materials, and personalized learning dashboards.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#benefits">Why Choose Us</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#schedule">Class Schedule</a></li>
+            <li><a href="#materials">Study Materials</a></li>
+            <li><a href="#dashboard">Dashboard</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Study Resources</h4>
+          <ul class="footer-links">
+            <li><a href="sample-notes.html">Web Dev Study Notes</a></li>
+            <li><a href="#materials">Python OOP Cheatsheet</a></li>
+            <li><a href="#materials">Java Collections Guide</a></li>
+            <li><a href="#materials">SQL Normalization Rules</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>About</h4>
+          <div class="footer-disclaimer-box">
+            <strong>Virtual Classroom Platform</strong><br>
+            Built with modern web technologies to provide an intuitive and seamless learning experience for students and educators.
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Virtual Classroom &bull; All Rights Reserved</p>
+        <p>Empowering Education Through Technology</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+  <script>
+    // Authentication check
+    if (localStorage.getItem('isLoggedIn') !== 'true') {
+      window.location.href = 'login.html';
+    }
+
+    // Display user greeting
+    const userName = localStorage.getItem('userName');
+    const userEmail = localStorage.getItem('userEmail');
+    const greetingEl = document.getElementById('user-greeting');
+
+    if (userName) {
+      greetingEl.textContent = `Hi, ${userName.split(' ')[0]}`;
+    } else if (userEmail) {
+      greetingEl.textContent = `Hi, ${userEmail.split('@')[0]}`;
+    }
+
+    // Logout functionality
+    document.getElementById('logout-btn').addEventListener('click', function() {
+      localStorage.removeItem('isLoggedIn');
+      localStorage.removeItem('userName');
+      localStorage.removeItem('userEmail');
+      window.location.href = 'login.html';
+    });
+  </script>
+</body>
+</html>

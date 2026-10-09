@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Material - Web Development Fundamentals Quick Reference</title>
+  <style>
+    :root {
+      --primary: #1e40af;
+      --primary-light: #3b82f6;
+      --primary-subtle: #eff6ff;
+      --text-dark: #1e293b;
+      --text-muted: #64748b;
+      --bg-page: #f8fafc;
+      --bg-card: #ffffff;
+      --border-color: #e2e8f0;
+      --code-bg: #0f172a;
+      --code-text: #e2e8f0;
+      --success: #10b981;
+      --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-stack);
+      background-color: var(--bg-page);
+      color: var(--text-dark);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      background: var(--bg-card);
+      border-radius: 12px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border-color);
+      overflow: hidden;
+    }
+
+    .doc-header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+      color: #ffffff;
+      padding: 2.5rem 2rem;
+      position: relative;
+    }
+
+    .doc-badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(4px);
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+
+    .doc-header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      line-height: 1.25;
+    }
+
+    .doc-header p {
+      color: #bfdbfe;
+      font-size: 1rem;
+    }
+
+    .doc-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 1.25rem;
+      font-size: 0.875rem;
+      color: #e0e7ff;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      padding-top: 1rem;
+    }
+
+    .doc-actions {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border-radius: 6px;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-white {
+      background: #ffffff;
+      color: #1e40af;
+    }
+
+    .btn-white:hover {
+      background: #f1f5f9;
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .doc-body {
+      padding: 2.5rem 2rem;
+    }
+
+    .table-of-contents {
+      background: var(--primary-subtle);
+      border-left: 4px solid var(--primary-light);
+      padding: 1.25rem 1.5rem;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 2.5rem;
+    }
+
+    .table-of-contents h3 {
+      font-size: 1.1rem;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+
+    .table-of-contents ul {
+      list-style-type: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.5rem;
+    }
+
+    .table-of-contents a {
+      color: var(--text-dark);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .table-of-contents a:hover {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      margin: 1.25rem 0 0.5rem 0;
+      color: #334155;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: #334155;
+    }
+
+    ul, ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+      color: #334155;
+    }
+
+    li {
+      margin-bottom: 0.35rem;
+    }
+
+    pre {
+      background: var(--code-bg);
+      color: var(--code-text);
+      padding: 1.25rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 0.9rem;
+      margin-bottom: 1.25rem;
+      line-height: 1.5;
+    }
+
+    code {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      background: #e2e8f0;
+      color: #0f172a;
+      padding: 0.15rem 0.35rem;
+      border-radius: 4px;
+      font-size: 0.88em;
+    }
+
+    pre code {
+      background: transparent;
+      color: inherit;
+      padding: 0;
+    }
+
+    .callout {
+      background: #f0fdf4;
+      border-left: 4px solid var(--success);
+      padding: 1rem 1.25rem;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .callout strong {
+      color: #166534;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.95rem;
+    }
+
+    th, td {
+      border: 1px solid var(--border-color);
+      padding: 0.75rem 1rem;
+      text-align: left;
+    }
+
+    th {
+      background-color: var(--primary-subtle);
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f8fafc;
+    }
+
+    .doc-footer {
+      border-top: 1px solid var(--border-color);
+      padding: 1.5rem 2rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      background: #f8fafc;
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+      }
+      .container {
+        box-shadow: none;
+        border: none;
+      }
+      .doc-actions {
+        display: none;
+      }
+      .doc-header {
+        background: #1e3a8a !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .doc-header {
+        padding: 1.75rem 1.25rem;
+      }
+      .doc-body {
+        padding: 1.75rem 1.25rem;
+      }
+      .doc-header h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header class="doc-header">
+      <span class="doc-badge">Study Material & Reference Guide</span>
+      <h1>Web Development Fundamentals</h1>
+      <p>A quick-reference study guide covering HTML5 semantic structure, modern CSS layouts, and Vanilla JavaScript DOM manipulation.</p>
+
+      <div class="doc-meta">
+        <div><strong>Course:</strong> Web Development</div>
+        <div><strong>Author:</strong> Prof. Sarah Jenkins</div>
+        <div><strong>Format:</strong> Verified Study Notes</div>
+        <div><strong>Revision:</strong> Fall Academic Edition</div>
+      </div>
+
+      <div class="doc-actions">
+        <a href="../index.html#materials" class="btn btn-white">&larr; Return to Classroom</a>
+        <button onclick="window.print()" class="btn btn-outline">&#128438; Print / Save as PDF</button>
+      </div>
+    </header>
+
+    <main class="doc-body">
+      <nav class="table-of-contents">
+        <h3>Contents</h3>
+        <ul>
+          <li><a href="#html5">1. Semantic HTML5</a></li>
+          <li><a href="#css-layout">2. CSS Flexbox &amp; Grid</a></li>
+          <li><a href="#js-dom">3. Vanilla JavaScript DOM</a></li>
+          <li><a href="#localstorage">4. Web Storage API</a></li>
+          <li><a href="#best-practices">5. Exam Key Takeaways</a></li>
+        </ul>
+      </nav>
+
+      <!-- Section 1 -->
+      <section id="html5">
+        <h2>1. Semantic HTML5 Architecture</h2>
+        <p>Semantic elements convey meaning to both the browser and the developer. They improve search engine ranking, accessibility (screen readers), and code maintainability.</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Element</th>
+              <th>Purpose &amp; Best Practice</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>&lt;header&gt;</code></td>
+              <td>Introductory content or navigational links for a page or section.</td>
+            </tr>
+            <tr>
+              <td><code>&lt;nav&gt;</code></td>
+              <td>Designates the primary navigational block of links.</td>
+            </tr>
+            <tr>
+              <td><code>&lt;main&gt;</code></td>
+              <td>The unique dominant content of the document body. Only one per page.</td>
+            </tr>
+            <tr>
+              <td><code>&lt;section&gt;</code></td>
+              <td>Thematic grouping of content, typically with a heading.</td>
+            </tr>
+            <tr>
+              <td><code>&lt;article&gt;</code></td>
+              <td>Self-contained composition that is independently reusable (e.g. course card).</td>
+            </tr>
+            <tr>
+              <td><code>&lt;footer&gt;</code></td>
+              <td>Footer containing author info, copyright, and auxiliary links.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Section 2 -->
+      <section id="css-layout">
+        <h2>2. Modern CSS Layouts (Flexbox vs Grid)</h2>
+        <p>Modern CSS eliminates the need for float hacks or heavy layout frameworks.</p>
+
+        <h3>CSS Flexbox (One-Dimensional)</h3>
+        <p>Ideal for distributing space along a single row or column (e.g., navigation bars, button clusters, form rows).</p>
+        <pre><code>/* Flexbox Container */
+.nav-container {
+  display: flex;
+  justify-content: space-between; /* Space items evenly */
+  align-items: center;            /* Center vertically */
+  gap: 1rem;                      /* Spacing between items */
+}</code></pre>
+
+        <h3>CSS Grid (Two-Dimensional)</h3>
+        <p>Ideal for structured multi-column card layouts, dashboard dashboards, and complex page grids.</p>
+        <pre><code>/* Auto-responsive Card Grid without media queries */
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}</code></pre>
+      </section>
+
+      <!-- Section 3 -->
+      <section id="js-dom">
+        <h2>3. Vanilla JavaScript DOM Manipulation</h2>
+        <p>Interacting with the Document Object Model using modern standards:</p>
+
+        <pre><code>// 1. Selecting Elements
+const courseCards = document.querySelectorAll('.course-card');
+const submitBtn = document.getElementById('submit-button');
+
+// 2. Event Listeners
+submitBtn.addEventListener('click', (event) => {
+  event.preventDefault(); // Prevent default page reload
+  console.log('Class scheduled successfully!');
+});
+
+// 3. Dynamic Element Creation & Safe Insertion
+function createNotice(message) {
+  const alertBox = document.createElement('div');
+  alertBox.className = 'alert-box';
+  // Use textContent to prevent XSS vulnerability
+  alertBox.textContent = message;
+  document.body.appendChild(alertBox);
+}</code></pre>
+
+        <div class="callout">
+          <strong>Security Note:</strong> Always prefer <code>textContent</code> over <code>innerHTML</code> when inserting user-supplied values into the DOM to guard against Cross-Site Scripting (XSS).
+        </div>
+      </section>
+
+      <!-- Section 4 -->
+      <section id="localstorage">
+        <h2>4. Browser LocalStorage (Persistence)</h2>
+        <p><code>localStorage</code> allows web applications to store key-value pairs in the client browser with no expiration date.</p>
+
+        <pre><code>// Saving array data to localStorage
+const userCourses = [{ id: '1', title: 'Custom Python 101' }];
+localStorage.setItem('my_courses', JSON.stringify(userCourses));
+
+// Retrieving and safely parsing data
+try {
+  const savedData = localStorage.getItem('my_courses');
+  const parsedCourses = savedData ? JSON.parse(savedData) : [];
+  console.log(parsedCourses);
+} catch (error) {
+  console.error('Failed to parse localStorage data:', error);
+}</code></pre>
+      </section>
+
+      <!-- Section 5 -->
+      <section id="best-practices">
+        <h2>5. Faculty Exam Summary Checklist</h2>
+        <ul>
+          <li>Always validate inputs on both the client side and server side in production environments.</li>
+          <li>Ensure contrast ratios meet WCAG AA standards (minimum 4.5:1 for standard text).</li>
+          <li>Use relative CSS units like <code>rem</code>, <code>em</code>, and percentages for responsive scalability.</li>
+          <li>Keep JavaScript modular and maintain separation of concerns between structure (HTML), presentation (CSS), and behavior (JS).</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="doc-footer">
+      <p>Virtual Classroom Academic Project &bull; Material Reference ID: MAT-WEB-101 &bull; Created for College Demonstration</p>
+    </footer>
+  </div>
+
+</body>
+</html>
